@@ -1,6 +1,7 @@
-# Federated Learning & Data Privacy 
-## General info
-This is the lab 1 
-TB is for mnist (Ex1-3)
-TB1 is for CIFAR10(BONUS EXERCISE - Complex Dataset & Model)
+# Federated Learning & Data Privacy
 
+## General info
+
+This is the lab 1
+TP is for mnist (Ex1-3)
+TP1_bonus is for CIFAR10(BONUS EXERCISE - Complex Dataset & Model)
