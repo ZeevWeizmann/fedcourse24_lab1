@@ -1,1 +1,1 @@
-TP is for mnist (Ex1-3)
+TP1 is for mnist (Ex1-3)
