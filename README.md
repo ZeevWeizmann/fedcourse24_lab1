@@ -37,24 +37,6 @@ This completed implementation allowed us to run experiments with FedAvg.
 
 ### Experimental Setup
 
-FedAvg was run on the **MNIST dataset** with different numbers of local steps:
-
-## Exercise 2: Completing the Code
-
-In the second exercise, the missing parts of the implementation were completed:
-
-- **Client** class: implemented `step()` for local training and `write_logs()` for reporting metrics.
-- **Aggregator** class: completed `mix()` to aggregate models and `update_clients()` to synchronize them.
-- **train.py**: finalized the training loop to perform multiple communication rounds.
-
-This completed implementation allowed us to run experiments with FedAvg.
-
----
-
-## Exercise 3: Effect of Local Epochs
-
-### Experimental Setup
-
 FedAvg was run on the **MNIST dataset** with different numbers of local steps: 1, 5, 10, 50, 100.
 Additionally, we tested **FedSGD** (batch size = dataset, local steps = 1).
 
