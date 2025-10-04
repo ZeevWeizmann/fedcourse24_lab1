@@ -17,7 +17,7 @@ from torchvision.transforms import Compose, ToTensor, Normalize
 import torch.nn as nn
 from torchvision import datasets, transforms, models
 from datasets.cifar10 import NPYDataset
-
+from torchvision.models import MobileNet_V2_Weights
 
 
 def experiment_not_implemented_message(experiment_name):
@@ -58,7 +58,11 @@ def get_model(experiment_name, device):
         model = LinearLayer(input_dim=784, output_dim=10, bias=True)
     elif experiment_name == "cifar10":
         # MobileNet v2  CIFAR10
-        model = models.mobilenet_v2(weights=None)   
+        # model = models.mobilenet_v2(weights=None) #Train from scratch
+        model = models.mobilenet_v2(weights=MobileNet_V2_Weights.DEFAULT) #Download pretrained weights
+        # Freeze feature extractor
+        for param in model.features.parameters():
+            param.requires_grad = False   
         in_features = model.classifier[1].in_features
         model.classifier[1] = nn.Linear(in_features, 10) # Change the output layer to match CIFAR-10 classes
     else:
