@@ -55,8 +55,7 @@ This completed implementation allowed us to run experiments with FedAvg.
 
 ### Experimental Setup
 
-FedAvg was run on the **MNIST dataset** with different numbers of local steps:
-1, 5, 10, 50, 100
+FedAvg was run on the **MNIST dataset** with different numbers of local steps: 1,5,10,50,100
 Additionally, we tested **FedSGD** (batch size = dataset, local steps = 1).
 
 ### Results
